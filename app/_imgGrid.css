@@ -1,0 +1,10 @@
+.imageGrid {
+  display: flex;
+  flex-flow: row wrap; }
+  .imageGrid img:hover {
+    width: 50%;
+    transition: all 0.3s ease; }
+  .imageGrid img:active {
+    width: 50%; }
+
+/*# sourceMappingURL=imgGrid.css.map */

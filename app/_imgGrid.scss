@@ -1,0 +1,29 @@
+
+@mixin bigImg($height) {
+  height: $height;
+  &:hover {
+    flex: 2 0 0;
+    background-repeat: repeat;
+    transition: flex .5s, background-repeat 1s;
+
+  }
+  &:active {
+
+  }
+}
+
+.imageGrid {
+  display: flex;
+  flex-flow: row wrap;
+
+  justify-content: flex-start;
+  align-content: space-between;
+  list-style-type: none;
+  li {
+
+    height: 300px;
+    margin: auto;
+    //@include bigImg(300px);
+  }
+}
+
