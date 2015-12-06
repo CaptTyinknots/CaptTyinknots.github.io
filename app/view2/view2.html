@@ -1,5 +1,8 @@
+<div ng-controller="imgcontrol">
 <h2>Doge</h2>
-
-<ul class="col-12 imageGrid" ng-controller="imgcontrol">
-  <li class="col-4" ng-repeat="pic in imgfiles" backimg="{{pic}}"></li>
+    <div>Number of images to show: </div>
+<input name="slider" ng-model="imgPerRow" ng-click="imgSquare=getClass()" class="col-3" type="range" min="0" max="12" value="3"/>
+    <ul class="col-12 imageGrid">
+  <li ng-class="imgSquare" ng-repeat="pic in imgfiles" backimg="{{pic}}"></li>
 </ul>
+</div>

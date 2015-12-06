@@ -17,7 +17,11 @@ var _getAllFilesFromFolder = function(dir) {
 */
 angular.module("myApp.imgcontrol", [])
     .controller('imgcontrol', ['$scope', function($scope) {
-        console.log("CAT");
+        $scope.imgPerRow = 3;
+        $scope.imgSquare = 'col-3';
+        $scope.getClass = function() {
+          return 'col-' + Math.floor(12 / $scope.imgPerRow);
+        };
         $scope.imgfiles = ['imgs/doge/0d2.jpg',
             'imgs/doge/10e.gif',
             'imgs/doge/307.jpg',
